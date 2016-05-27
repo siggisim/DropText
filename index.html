@@ -7,7 +7,7 @@
          display: flex;
          padding: 0;
          justify-content: center;
-      	-webkit-font-smoothing: antialiased;
+      	 -webkit-font-smoothing: antialiased;
        }
        
        iframe {
@@ -42,9 +42,9 @@
          top: 0;
          width: 100%;
          height: 100%;
- -webkit-filter: blur(20px);
-         filter: blur(20px);
          opacity: 1;
+         -webkit-filter: blur(20px);
+                 filter: blur(20px);
        }
        
        .hidden {
@@ -69,14 +69,16 @@
     <script src="https://www.youtube.com/iframe_api"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
     <script>
+      var videoId = 'A7MiR053DE8';
       var thumbnailId = 'thumbnail';
+      var hiddenClass = 'hidden';
       var start = 55;
     
       function onYouTubeIframeAPIReady() {
         new YT.Player('video', {
           height: '100%',
           width: '100%',
-          videoId: 'A7MiR053DE8',
+          videoId: videoId,
           playerVars: {
             loop: 1, 
             controls: 0, 
@@ -98,7 +100,7 @@
       
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && document.getElementById(thumbnailId)) {
-          document.getElementById(thumbnailId).classList.add('hidden');
+          document.getElementById(thumbnailId).classList.add(hiddenClass);
         }
         if (event.data == YT.PlayerState.ENDED) {
           event.target.seekTo(start);
