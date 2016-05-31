@@ -249,6 +249,7 @@ a {
 
 .preview {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   border: 0;
+  border-bottom: 1px solid #eee;
 }
