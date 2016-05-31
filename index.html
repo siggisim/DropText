@@ -19,26 +19,30 @@
       <a href="#" onclick="changePreview('nike')">Nike</a> | 
       <a href="#" onclick="changePreview('google')">Google</a> | 
       <a href="#" onclick="changePreview('youtube')">YouTube</a> | 
-      <a href="#" onclick="changePreview('neistat')">Casey Neistat</a>
+      <a href="#" onclick="changePreview('neistat')">Casey Neistat</a> | 
+      <a href="#" onclick="changePreview('droptext')">DropText</a>
+      <pre id="url">http://si.gg/droptext/index.php</pre>
     </section>
     <section class="page-header">
       <h1 class="project-name">Droptext</h1>
-      <h2 class="project-tagline">Video ❤️ Text</h2>
+      <h2 class="project-tagline">Video meets text</h2>
       <a href="https://github.com/siggisim/DropText" class="btn">View on GitHub</a>
       <a href="https://github.com/siggisim/DropText/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/siggisim/DropText/tarball/master" class="btn">Download .tar.gz</a>
     </section>
     <script>
       var previews = {
-        "nike":    "http://si.gg/droptext/?text=Nike&video=AK2U977acCE&size=400&start=1",
-        "google":  "http://si.gg/droptext/?text=Google&video=9No-FiEInLA&size=200&start=1&weight=700",
-        "youtube": "http://si.gg/droptext/?text=YouTube&video=KK9bwTlAvgo&size=200&start=26&weight=700",
-        "neistat": "http://si.gg/droptext/?text=Casey%20%3Cbr%3E%20Neistat&video=uy6MzxJSnWM&size=300&start=195&font=Amatic+SC&weight=700",
-        "flume":   "http://si.gg/droptext/?text=Flume&video=5IqDR2WjVl8&size=200&start=1",
+        "nike":    "http://si.gg/droptext/index.php?text=Nike&video=AK2U977acCE&size=400&start=1",
+        "google":  "http://si.gg/droptext/index.php?text=Google&video=9No-FiEInLA&size=200&start=1&weight=700",
+        "youtube": "http://si.gg/droptext/index.php?text=YouTube&video=KK9bwTlAvgo&size=200&start=26&weight=700",
+        "neistat": "http://si.gg/droptext/index.php?text=Casey%20%3Cbr%3E%20Neistat&video=uy6MzxJSnWM&size=300&start=195&font=Amatic+SC&weight=700",
+        "flume":   "http://si.gg/droptext/index.php?text=Flume&video=5IqDR2WjVl8&size=200&start=1",
+        "droptext": "http://si.gg/droptext/index.php",
       };
     
       function changePreview(preview) {
         document.getElementById("preview").src = previews[preview];
+        document.getElementById("url").innerHtml = previews[preview];
       }
     </script>
   </body>
