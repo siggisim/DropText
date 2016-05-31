@@ -8,15 +8,17 @@
     'video'   => 'A7MiR053DE8',
     'size'    => '200',
     'start'   => '55',
-    'font'    => 'Roboto'
+    'font'    => 'Roboto',
+    'weight'  => '900'
   );
   
   // Initialize variables with query parameters or defaults
-  $text     = $_GET['text']  ? $_GET['text']  : $defaults['text'];
-  $video    = $_GET['video'] ? $_GET['video'] : $defaults['video'];
-  $size     = $_GET['size']  ? $_GET['size']  : $defaults['size'];
-  $start    = $_GET['start'] ? $_GET['start'] : $defaults['start'];
-  $font_url = $_GET['font']  ? $_GET['font']  : $defaults['font'];
+  $text     = $_GET['text']   ? $_GET['text']   : $defaults['text'];
+  $video    = $_GET['video']  ? $_GET['video']  : $defaults['video'];
+  $size     = $_GET['size']   ? $_GET['size']   : $defaults['size'];
+  $start    = $_GET['start']  ? $_GET['start']  : $defaults['start'];
+  $font_url = $_GET['font']   ? $_GET['font']   : $defaults['font'];
+  $weight   = $_GET['weight'] ? $_GET['weight'] : $defaults['weight'];
   $font     = str_replace('+', ' ', $font_url);
 ?>
 
@@ -24,12 +26,11 @@
   <head>
     <title><?=$text?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <style>
       body {
         font-family: '<?=$font?>', sans-serif;
         font-size: <?=$size?>px;
-        font-weight: 900;
+        font-weight: <?=$weight?>;
         height: 100%;
         margin: 0;
         overflow: hidden;
@@ -113,7 +114,7 @@
        
     </style>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <link href='https://fonts.googleapis.com/css?family=<?=$font_url?>:900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=<?=$font_url?>:<?=$weight?>' rel='stylesheet' type='text/css'>
     <script>
       var videoId = '<?=$video?>';
       var start = <?=$start?>;
