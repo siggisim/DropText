@@ -1,6 +1,6 @@
 <?
   // Example:
-  // http://si.gg/test.php?text=DropText&video=A7MiR053DE8&size=200&start=55&font=Roboto
+  // http://si.gg/droptext/?text=DropText&video=A7MiR053DE8&size=200&start=55&font=Roboto
   
   // Default values
   $defaults = array(
