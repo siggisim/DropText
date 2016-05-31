@@ -21,7 +21,7 @@
       <a href="#" onclick="changePreview('youtube')">YouTube</a> | 
       <a href="#" onclick="changePreview('neistat')">Casey Neistat</a> | 
       <a href="#" onclick="changePreview('droptext')">DropText</a>
-      <pre id="url">http://si.gg/droptext/index.php</pre>
+      <pre class="url" id="url">http://si.gg/droptext/index.php</pre>
     </section>
     <section class="page-header">
       <h1 class="project-name">Droptext</h1>
@@ -42,7 +42,7 @@
     
       function changePreview(preview) {
         document.getElementById("preview").src = previews[preview];
-        document.getElementById("url").innerHtml = previews[preview];
+        document.getElementById("url").innerHTML = previews[preview];
       }
     </script>
   </body>
