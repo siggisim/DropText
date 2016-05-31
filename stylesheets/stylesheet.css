@@ -247,6 +247,10 @@ a {
   .site-footer {
     font-size: 0.9rem; } }
 
+.demos {
+  text-align: center;
+}
+
 .preview {
   width: 100vw;
   height: 80vh;
