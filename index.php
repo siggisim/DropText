@@ -23,6 +23,7 @@
 <html>
   <head>
     <title><?=$text?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       body {
         font-family: '<?=$font?>', sans-serif;
