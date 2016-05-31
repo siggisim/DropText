@@ -255,9 +255,14 @@ a {
   width: 100vw;
   height: 80vh;
   border: 0;
-  border-bottom: 1px solid #eee;
 }
 
 .main-content .url {
   margin-top: 20px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: 1px solid #eee;
 }
