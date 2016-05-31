@@ -261,3 +261,9 @@ a {
 .main-content .url {
   margin-top: 20px;
 }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #eee;
+}
