@@ -11,17 +11,18 @@
   </head>
   <body>
     <section>
-      <iframe class="preview" src="http://si.gg/droptext/"></iframe>
+      <iframe id="preview" class="preview" src="http://si.gg/droptext/"></iframe>
     </section>
     <section class="main-content">
       <h1>Demos</h1>
-      <a href="">Snapchat</a>
-      <a href="">Casey Neistat</a>
-      <a href="">Nike</a>
-      <a href="">Y Combinator</a>
-      <a href="">YouTube</a>
-      <a href="">Github</a>
-      <a href="">Flume</a>
+      <li><a href="#" onclick="changePreview('yc')">Y Combinator</a></li>
+      <li><a href="#" onclick="changePreview('neistat')">Casey Neistat</a></li>
+      <li><a href="#" onclick="changePreview('nike')">Nike</a></li>
+      <li><a href="#" onclick="changePreview('google')">Google</a></li>
+      <li><a href="#" onclick="changePreview('youtube')">YouTube</a></li>
+      <li><a href="#" onclick="changePreview('snapchat')">Snapchat</a></li>
+      <li><a href="#" onclick="changePreview('github')">Github</a></li>
+      <li><a href="#" onclick="changePreview('flume')">Flume</a></li>
     </section>
     <section class="page-header">
       <h1 class="project-name">Droptext</h1>
@@ -30,5 +31,21 @@
       <a href="https://github.com/siggisim/DropText/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/siggisim/DropText/tarball/master" class="btn">Download .tar.gz</a>
     </section>
+    <script>
+      var previews = {
+        "yc": "http://si.gg/droptext/?text=Y%20Combinator&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+        "neistat": "http://si.gg/droptext/?text=Casey%20Neistat&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+        "nike": "http://si.gg/droptext/?text=Nike&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+        "google": "http://si.gg/droptext/?text=Google&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+        "youtube": "http://si.gg/droptext/?text=Youtube&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+        "snapchat": "http://si.gg/droptext/?text=Snapchat&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+        "github": "http://si.gg/droptext/?text=Github&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+        "flume": "http://si.gg/droptext/?text=Flume&video=A7MiR053DE8&size=200&start=55&font=Roboto",
+      };
+    
+      function changePreview(preview) {
+        document.getElementById("preview").src = previews[preview];
+      }
+    </script>
   </body>
 </html>
