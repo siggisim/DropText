@@ -1,2 +1,2 @@
 # DropText
-Video ❤️ Text
+Use 📺 to 🔥 up your text 
