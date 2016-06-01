@@ -1,6 +1,6 @@
 <?
   // Example:
-  // http://si.gg/droptext/index.php?text=DropText&video=A7MiR053DE8&size=200&start=55&font=Roboto&weight=900
+  // http://si.gg/droptext/?text=DropText&video=A7MiR053DE8&size=200&start=55&font=Roboto
   
   // Default values
   $defaults = array(
@@ -13,12 +13,12 @@
   );
   
   // Initialize variables with query parameters or defaults
-  $text     = $_GET['text']   ? $_GET['text']   : $defaults['text'];
-  $video    = $_GET['video']  ? $_GET['video']  : $defaults['video'];
-  $size     = $_GET['size']   ? $_GET['size']   : $defaults['size'];
-  $start    = $_GET['start']  ? $_GET['start']  : $defaults['start'];
-  $font_url = $_GET['font']   ? $_GET['font']   : $defaults['font'];
-  $weight   = $_GET['weight'] ? $_GET['weight'] : $defaults['weight'];
+  $text     = isset($_GET['text'])   ? $_GET['text']   : $defaults['text'];
+  $video    = isset($_GET['video'])  ? $_GET['video']  : $defaults['video'];
+  $size     = isset($_GET['size'])   ? $_GET['size']   : $defaults['size'];
+  $start    = isset($_GET['start'])  ? $_GET['start']  : $defaults['start'];
+  $font_url = isset($_GET['font'])   ? $_GET['font']   : $defaults['font'];
+  $weight   = isset($_GET['weight']) ? $_GET['weight'] : $defaults['weight'];
   $font     = str_replace('+', ' ', $font_url);
 ?>
 
