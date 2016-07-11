@@ -1,0 +1,89 @@
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+ 
+.droptext-video {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+ 
+.droptext-thumbnail {
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+ 
+.droptext-overlay {
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  line-height: .9em;
+  mix-blend-mode: screen; /* The magic */
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+ 
+.droptext-overlay::selection {
+  background: #888;
+}
+ 
+.droptext-hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+/* Resize text based on screen size. You can use the
+ * resizeTextBasedOnScreenWidth config flag to turn
+ * this on.
+ */
+@media screen and (max-width: 900px) {
+  .droptext-resize .droptext-overlay { font-size: .8em; }
+}
+@media screen and (max-width: 750px) {
+  .droptext-resize .droptext-overlay { font-size: .6em; }
+}
+@media screen and (max-width: 550px) {
+  .droptext-resize .droptext-overlay { font-size: .4em; }
+}
+@media screen and (max-width: 350px) {
+  .droptext-resize .droptext-overlay { font-size: .3em; }
+}
+
+/* Maintain the aspect ratio of full screen video to 
+ * avoid black bars. You can use the config flag
+ * maintainFullScreenVideoAspectRatio to turn this on.
+ */
+@media screen and (min-aspect-ratio: 16/9) {
+  .droptext-aspect-ratio .droptext-video {
+    min-height: 56vw;
+    margin-top: calc(50vh - 28vw);
+  }
+}
+@media screen and (max-aspect-ratio: 16/9) {
+  .droptext-aspect-ratio .droptext-video {
+    min-width: 178vh;
+    margin-left: calc(50vw - 89vh);
+  }
+}
+ 
